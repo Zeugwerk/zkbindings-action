@@ -1,0 +1,45 @@
+name: 'Zeugwerk Bindings Action'
+description: 'Generate bindings for TwinCAT PLCs'
+branding:
+  icon: 'book-open'
+  color: 'gray-dark'
+inputs:
+  username:
+    description: 'Username for the Zeugwerk Bindings Service'
+    required: true
+    default: ''
+  password:
+    description: 'Password for the Zeugwerk Bindings Service'
+    required: true
+    default: ''
+  tmc:
+    description: 'Path to TwinCAT .tmc file'
+    required: true
+    default: ''
+  project:
+    description: 'Name of the project, the generated files will use this name for the generated classes'
+    required: true
+    default: 'Default'      
+  filter:
+    description: ''
+    required: false
+    default: 'Space seperated list of datatypes, which should be regarded when creating bindings. Defaults to all datatypes if the parameter is empty'
+  languages:
+    description: ''
+    required: false
+    default: 'Space seperated list of programming languages (cs cpp) for which bindings should be generated for'
+  version:
+    description: ''
+    required: false
+    default: 'Version of your PLC'  
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.tmc }}    
+    - ${{ inputs.project }}
+    - ${{ inputs.filter }}
+    - ${{ inputs.languages }}
+    - ${{ inputs.version }}
