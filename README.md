@@ -51,6 +51,7 @@ jobs:
         with:
           username: ${{ secrets.ACTIONS_ZGWK_USERNAME }}
           password: ${{ secrets.ACTIONS_ZGWK_PASSWORD }}
+          project: 'Untitled1'
           tmc: 'Untitled1/Untitled1.tmc'
           filter: ''
       - name: Upload
