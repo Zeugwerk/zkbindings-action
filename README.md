@@ -49,5 +49,11 @@ jobs:
           password: ${{ secrets.ACTIONS_ZGWK_PASSWORD }}
           tmc: 'Untitled1/Untitled1.tmc'
           filter: ''
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: Bindings
+          path: |
+            archive/**/*           
 ```
 
