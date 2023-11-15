@@ -1,6 +1,6 @@
 # zkdoc-action
 
-This [GitHub Action](https://github.com/features/actions) will build bindings for a TwinCAT PLC for various programming languages (atm C# only) 
+This [GitHub Action](https://github.com/features/actions) will build bindings for a TwinCAT PLC for various programming languages (atm C# and C++) 
 
 [Register](https://zeugwerk.dev/wp-login.php?action=register) to use this action for public repositories, this will allow you to run this action 30 times per month. [Contact us](mailto:info@zeugwerk.at) to retrieve a subscription if you need more builds per month or use Zeugwerk Bindings for private repositories either on GitHub or any CI/CD server hosted in the cloud or on-premise or need support.
 
