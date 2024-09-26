@@ -95,6 +95,6 @@ _ads.Connect(851);
 // bind _quickstart to the PLC
 _quickstart = new PLC.Mirror.QuickstartCom("ZGlobal.Com.Unit.Quickstart", _ads);
 
-// synchronously write a struct to the PLC
+// synchronously write a struct to the PLC. Access is type-safe and the C# compiler will report an error during compilation if the symbols on the PLC changed
 _quickstart.Subscribe.Equipment.LimitSwitchLeft.Sync = new PLC.Types.ZApplication_DigitalComSubscribe { Enable = 0, Write = 1 };	
 ```
