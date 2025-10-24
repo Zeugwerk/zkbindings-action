@@ -44,7 +44,7 @@ fi
 while [[ $status == *"HTTP/1.1 203"*   ]]; do
 
     curl -s --show-error -N \
-        -H "Authorization: Bearer $bearer_token" \    
+        -H "Authorization: Bearer $bearer_token" \
         -F "method=zkbindings" \
         -F "async=true" \
         -F "token=$token" \
